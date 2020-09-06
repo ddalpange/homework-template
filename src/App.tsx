@@ -2,16 +2,22 @@ import React from "react";
 import { Routes } from "./Routes";
 import { ResetCSS } from "./utils/ResetCSS";
 import { BrowserRouter } from "react-router-dom";
+import "./utils/initSwiper";
+import styled from "styled-components";
 
 const App = () => {
   return (
-    <div id="root">
+    <Wrapper id="root">
       <ResetCSS />
       <BrowserRouter>
         <Routes />
       </BrowserRouter>
-    </div>
+    </Wrapper>
   );
 };
 
 export default App;
+
+const Wrapper = styled.main`
+  padding: 16px;
+`;
